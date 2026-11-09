@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalSnake", "TerminalSnake.csproj", "{C9515C12-A8DC-4545-A6C3-59AAF5A4AF6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalSnake.Tests", "TerminalSnake.Tests\TerminalSnake.Tests.csproj", "{B5E4FBB3-9FC8-46AA-B16C-69D279C9531C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9515C12-A8DC-4545-A6C3-59AAF5A4AF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9515C12-A8DC-4545-A6C3-59AAF5A4AF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9515C12-A8DC-4545-A6C3-59AAF5A4AF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9515C12-A8DC-4545-A6C3-59AAF5A4AF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5E4FBB3-9FC8-46AA-B16C-69D279C9531C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E4FBB3-9FC8-46AA-B16C-69D279C9531C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E4FBB3-9FC8-46AA-B16C-69D279C9531C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E4FBB3-9FC8-46AA-B16C-69D279C9531C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

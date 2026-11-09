@@ -9,4 +9,8 @@
     <AssemblyName>TerminalSnake</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="TerminalSnake.Tests/**/*.cs" />
+  </ItemGroup>
+
 </Project>

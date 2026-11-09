@@ -5,6 +5,7 @@
 ### A flicker-free, pure C# Snake game built for the terminal.
 
 ![.NET 8](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white)
+[![.NET CI](https://github.com/Zaiim23/terminal-snake/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Zaiim23/terminal-snake/actions/workflows/dotnet.yml)
 ![Dependencies](https://img.shields.io/badge/dependencies-none-success)
 ![Platform](https://img.shields.io/badge/platform-console-lightgrey)
 
@@ -92,6 +93,30 @@ That’s it! `dotnet run` restores and builds the project automatically before l
 | `Direction.cs` | Direction enum plus the opposite-direction check used to prevent reversals. |
 | `ConsoleRenderer.cs` | Draws the colored playfield, HUD, score, game-over screen, and performs diff-based updates. |
 | `TerminalSnake.csproj` | Project configuration targeting .NET 8 with nullable reference types enabled. |
+| `TerminalSnake.Tests/` | xUnit test project covering snake movement and food spawning rules. |
+| `TerminalSnake.sln` | Solution file used by the CI workflow to build and test both projects. |
+
+## 🧪 Testing
+
+The game rules are covered by an xUnit test project. Run the full suite from the repository root:
+
+```bash
+dotnet test TerminalSnake.sln
+```
+
+The tests cover:
+
+- Head and body placement during construction
+- Movement with and without growth
+- Queued turns and rejection of 180° reversals
+- Tail-vacating collision behaviour
+- Food spawning on free cells, never on occupied cells, and the full-board case
+
+The same build and test commands run automatically on every push through GitHub Actions.
+
+## 📄 License
+
+Released under the MIT License. See [LICENSE](LICENSE) for the full text.
 
 ---
 

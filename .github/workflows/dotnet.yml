@@ -1,0 +1,30 @@
+name: .NET
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  build-and-test:
+    name: Build and test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Restore dependencies
+        run: dotnet restore TerminalSnake.sln
+
+      - name: Build
+        run: dotnet build TerminalSnake.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test TerminalSnake.sln --configuration Release --no-build --verbosity normal
